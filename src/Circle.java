@@ -55,7 +55,7 @@ public class Circle {
 	return r;
     }
     /**
-     * Main-Methode. Testet in diesem Falls die Klassen-Implementation Circle.
+     * Main-Methode. Testet in diesem Fall die Klassen-Implementation Circle.
      */
     public static void main(String[] args) {
         Circle circle = new Circle(); // Neue Circle-Instanz
