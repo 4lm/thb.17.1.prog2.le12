@@ -16,4 +16,8 @@ public class Rectangle extends Figure {
     public double area() {
 	return a * b;
     }
+    @Override
+    public String getForm() {
+	return "Rectangle";
+    }
 }
