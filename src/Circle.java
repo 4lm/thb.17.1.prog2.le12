@@ -1,25 +1,24 @@
-public class Circle {
-    private double r;
-    private double PI = Math.PI;
+public class Circle extends Figure {
     Circle() {
-	r = 0;
+	super();
     }
+    Circle(double x, double y, double a, double b) {
+	super();
+    }
+    Circle(double x, double y, double a, double b, Color fC, Color lC) {
+	super();
+    }
+    @Override
     public double circumference() {
-	return 2 * PI * r;
+	return 2 * PI * (a/2);
     }
+    @Override
     public double area() {
-	return PI * r * r;
+	return PI * (a/2) * (a/2);
     }
-    public void show() {
-	System.out.println("Radius : " + getRadius());
-	System.out.println("Umfang : " + circumference());
-	System.out.println("Flaeche: " + area());
+    @Override
+    public String getForm() {
+	return "Circle";
     }
-    public void setRadius(double r) {
-	this.r = r;
-    }
-    public double getRadius() {
-	return r;
-    }  
 }
 
