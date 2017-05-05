@@ -1,4 +1,4 @@
-public class Ellipse extends Figure {
+public class Ellipse extends Circle {
     Ellipse() {
 	super();
     }
@@ -11,10 +11,6 @@ public class Ellipse extends Figure {
     @Override
     public double circumference() {
 	return 2 * PI * Math.sqrt((Math.pow((a/2),2) + Math.pow((b/2),2)) / 2);
-    }
-    @Override
-    public double area() {
-	return PI * (a/2) * (b/2);
     }
     @Override
     public String getForm() {
