@@ -3,10 +3,10 @@ public class Circle extends Figure {
 	super();
     }
     Circle(double x, double y, double a, double b) {
-	super();
+	super(x, y, a, b);
     }
     Circle(double x, double y, double a, double b, Color fC, Color lC) {
-	super();
+	super(x, y, a, b, fC, lC);
     }
     @Override
     public double circumference() {
