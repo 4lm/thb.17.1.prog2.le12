@@ -7,17 +7,13 @@ abstract class Figure {
 	x = 0;
 	y = 0;
         a = 0;
-	b = 0;
-	fillColor.setRGB(0,0,0);
-	lineColor.setRGB(0,0,0);
+        b = 0;
     }
     Figure(double x, double y, double a, double b) {
 	this.x = x;
 	this.y = y;
         this.a = a;
 	this.b = b;
-	fillColor.setRGB(0,0,0);
-	lineColor.setRGB(0,0,0);
     }
     Figure(double x, double y, double a, double b, Color fC, Color lC) {
 	this.x = x;
