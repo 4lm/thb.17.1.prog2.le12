@@ -15,15 +15,27 @@ public class Test {
 	// Test Figures
 	Figure circle = new Circle(0,0,10,10);
 	Figure ellipse = new Ellipse(0,0,10,10);
+	Figure square = new Square(0,0,10,10);
 	Figure rectangle = new Rectangle(0,0,10,10);
-	System.out.println("Circle: " + circle.toString());
-	System.out.println(circle.circumference());
-	System.out.println(circle.area());
-	System.out.println("Ellipse: " + ellipse.toString());
-	System.out.println(ellipse.circumference());
-	System.out.println(ellipse.area());
-	System.out.println("Rectangle: " + rectangle.toString());
-	System.out.println(rectangle.circumference());
-	System.out.println(rectangle.area());
+	Figure line = new Line(0,0,1,10);
+	Figure triangle = new Triangle(0,0,10,10);
+	System.out.println("\nCircle       : " + circle.toString());
+	System.out.println("Circumference: " + circle.circumference());
+	System.out.println("Area         : " + circle.area());
+	System.out.println("\nEllipse      : " + ellipse.toString());
+	System.out.println("Circumference: " + ellipse.circumference());
+	System.out.println("Area         : " + ellipse.area());
+	System.out.println("\nSquare       : " + square.toString());
+	System.out.println("Circumference: " + square.circumference());
+	System.out.println("Area         : " + square.area());
+	System.out.println("\nRectangle    : " + rectangle.toString());
+	System.out.println("Circumference: " + rectangle.circumference());
+	System.out.println("Area         : " + rectangle.area());
+	System.out.println("\nLine         : " + line.toString());
+	System.out.println("Circumference: " + line.circumference());
+	System.out.println("Area         : " + line.area());
+	System.out.println("\nTriangle     : " + triangle.toString());
+	System.out.println("Circumference: " + triangle.circumference());
+	System.out.println("Area         : " + triangle.area());
     }
 }
