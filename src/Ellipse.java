@@ -10,7 +10,7 @@ public class Ellipse extends Figure {
     }
     @Override
     public double circumference() {
-	return 2 * PI * Math.sqrt((Math.pow(a,2) + Math.pow(b,2)) / 2);
+	return 2 * PI * Math.sqrt((Math.pow((a/2),2) + Math.pow((b/2),2)) / 2);
     }
     @Override
     public double area() {
@@ -21,4 +21,3 @@ public class Ellipse extends Figure {
 	return "Ellipse";
     }
 }
-
