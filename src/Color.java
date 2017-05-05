@@ -1,9 +1,9 @@
 class Color {
-    private int r, g, b, rgb;
+    private int rgb;
+    public Color() {
+	rgb = 0;
+    }
     public void setRGB(int r, int g, int b) {
-	this.r = r;
-	this.g = g;
-	this.b = b;
 	if (r > 255)
 	    r = 255;
 	if (r < 0)
