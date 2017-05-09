@@ -53,6 +53,7 @@ abstract class Figure {
     public String getColors() {
 	return "Fill: " + fillColor.getRGB() + " Line: " + lineColor.getRGB();
     }
+    @Override
     public String toString() {
 	return getForm();
     }
