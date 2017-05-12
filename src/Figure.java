@@ -27,10 +27,6 @@ abstract class Figure {
 	this.x = x;
 	this.y = y;
     }
-    public void setDim(double a, double b) {
-	this.a = a;
-	this.b = b;
-    }
     public void setColors(Color fC, Color lC) {
 	fillColor = fC;
 	lineColor = lC;

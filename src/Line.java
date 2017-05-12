@@ -1,4 +1,4 @@
-public class Line extends Rectangle {
+public class Line extends Rectangle implements Dimension {
     Line() {
 	super();
     }
@@ -7,6 +7,11 @@ public class Line extends Rectangle {
     }
     Line(double x, double y, double a, double b, Color fC, Color lC) {
 	super(x, y, a, b, fC, lC);
+    }
+    @Override
+    public void setDim(double a, double b) {
+	this.a = a;
+	this.b = b;
     }
     @Override
     public String getForm() {

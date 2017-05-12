@@ -1,4 +1,4 @@
-public class Ellipse extends Circle {
+public class Ellipse extends Circle implements Dimension {
     Ellipse() {
 	super();
     }
@@ -7,6 +7,11 @@ public class Ellipse extends Circle {
     }
     Ellipse(double x, double y, double a, double b, Color fC, Color lC) {
 	super(x, y, a, b, fC, lC);
+    }
+    @Override
+    public void setDim(double a, double b) {
+	this.a = a;
+	this.b = b;
     }
     @Override
     public double circumference() {
