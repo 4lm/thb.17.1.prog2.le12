@@ -11,7 +11,7 @@ public class Square extends Figure implements Dimension {
     @Override
     public void setDim(double a, double b) {
 	this.a = a;
-	this.b = b;
+	this.b = a;
     }
     @Override
     public double circumference() {
