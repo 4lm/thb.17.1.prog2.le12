@@ -1,4 +1,4 @@
-public class Ellipse extends Circle implements Dimension {
+public class Ellipse extends Circle implements Dimension, Pi {
     Ellipse() {
 	super();
     }

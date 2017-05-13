@@ -1,5 +1,4 @@
 public class Triangle extends Figure implements Dimension {
-    // Isosceles Triangle
     Triangle() {
 	super();
     }

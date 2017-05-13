@@ -1,4 +1,4 @@
-public class Circle extends Figure implements Dimension {
+public class Circle extends Figure implements Dimension, Pi {
     Circle() {
 	super();
     }

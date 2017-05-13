@@ -1,6 +1,6 @@
 public class Polygon extends Figure {
-    protected int n;
-    protected double l;
+    private int n;
+    private double l;
     Polygon() {
 	super();
 	n = 3;
