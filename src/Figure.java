@@ -1,5 +1,4 @@
 abstract class Figure {
-    protected final double PI = Math.PI;
     protected double x, y, a, b;
     protected Color fillColor;
     protected Color lineColor;
