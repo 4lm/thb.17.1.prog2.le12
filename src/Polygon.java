@@ -42,6 +42,10 @@ public class Polygon extends Figure {
 	lineColor = lC;
     }
     @Override
+    public void setDim(double a, double b) {
+	//
+    }
+    @Override
     public double getWidth() {
 	double w;
 	switch (n) {
@@ -163,18 +167,6 @@ public class Polygon extends Figure {
     }
     @Override
     public String getForm() {
-	return "Polygon";
-    }
-    public void setCorner(int n) {
-	this.n = n;
-    }
-    public int getCorner() {
-	return n;
-    }
-    public void setSideLength() {
-	this.l = l;
-    }
-    public double getSideLength() {
-	return l;
+	return "Polygon: " + n + " corners, " + l + " length per side";
     }
 }

@@ -13,13 +13,13 @@ public class Test {
 	else
 	    System.out.println("Color t2: fail - expected: 16711935; delivered: " + color.getRGB());
 	// Test Figures
-	Circle circle = new Circle(0,0,10,10);
-	Ellipse ellipse = new Ellipse(0,0,10,5);
-	Square square = new Square(0,0,10,10);
-	Rectangle rectangle = new Rectangle(0,0,10,5);
-	Line line = new Line(0,0,1,10);
-	Triangle triangle = new Triangle(0,0,10,10);
-	Polygon polygon = new Polygon(0,0,8,0.765366865);
+	Figure circle = new Circle(0,0,10,10);
+	Figure ellipse = new Ellipse(0,0,10,5);
+	Figure square = new Square(0,0,10,10);
+	Figure rectangle = new Rectangle(0,0,10,5);
+	Figure line = new Line(0,0,1,10);
+	Figure triangle = new Triangle(0,0,10,10);
+	Figure polygon = new Polygon(0,0,8,0.765366865);
 	System.out.println("\nCircle       : " + circle.toString());
 	System.out.println("Width        : " + circle.getWidth());
 	System.out.println("Height       : " + circle.getHeight());
@@ -61,11 +61,5 @@ public class Test {
 	System.out.println("Height       : " + polygon.getHeight());
 	System.out.println("Circumference: " + polygon.circumference());
 	System.out.println("Area         : " + polygon.area());
-	System.out.println("Corners      : " + polygon.getCorner());
-	System.out.println("Side Length  : " + polygon.getSideLength());
-
-	//System.out.println(polygon.a);
-	//System.out.println(polygon.l);
-	
     }
 }
