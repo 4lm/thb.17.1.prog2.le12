@@ -1,172 +1,35 @@
-public class Polygon extends Figure {
+public class Polygon extends Figure implements Pi {
     private int n;
-    private double l;
     Polygon() {
 	super();
 	n = 3;
-	l = 0;
     }
-    Polygon(double x, double y, int n, double l) {
-	this.x = x;
-	this.y = y;
-	switch (n) {
-	case 3:
-	    this.n = 3;
-	    break;
-	case 4:
-	    this.n = 4;
-	    break;
-	case 5:
-	    this.n = 5;
-	    break;
-	case 6:
-	    this.n = 6;
-	    break;
-	case 8:
-	    this.n = 8;
-	    break;
-	case 10:
-	    this.n = 10;
-	    break;
-	case 12:
-	    this.n = 12;
-	    break;
-	default:
-	    this.n = 3;
-	}
-	this.l = l;
+    Polygon(double x, double y, double a, double b, int n) {
+	super(x,y,a,b);
+	this.n = n;
+        if (n < 3)
+	    n = 3;
     }
-    Polygon(double x, double y, int n, double l, Color fC, Color lC) {
-	this(x, y, n, l);
+    Polygon(double x, double y, double a, double b, int n, Color fC, Color lC) {
+	this(x,y,a,b,n);
 	fillColor = fC;
 	lineColor = lC;
     }
     @Override
     public void setDim(double a, double b) {
-	//
-    }
-    @Override
-    public double getWidth() {
-	double w;
-	switch (n) {
-	case 3:
-	    w = l;
-	    break;
-	case 4:
-	    w = l;
-	    break;
-	case 5:
-	    w = l * Math.sqrt((1/5) * (5 + (2 * Math.sqrt(5))));
-	    break;
-	case 6:
-	    w = l * Math.sqrt(3);
-	    break;
-	case 8:
-	    w = l * (2 * (1 + Math.sqrt(2)));
-	    break;
-	case 10:
-	    w = l * Math.sqrt(5 + (2 * Math.sqrt(5)));
-	    break;
-	case 12:
-	    w = l * (2 + Math.sqrt(3));
-	    break;
-	default:
-	    w = 0;
-	}
-	return w;
-    }
-    @Override
-    public double getHeight() {
-	double h;
-	switch (n) {
-	case 3:
-	    h = Math.sqrt(l - (l/2));
-	    break;
-	case 4:
-	    h = l;
-	    break;
-	case 5:
-	    h = l * Math.sqrt((1/5) * (5 + (2 * Math.sqrt(5))));
-	    break;
-	case 6:
-	    h = l * Math.sqrt(3);
-	    break;
-	case 8:
-	    h = l * (2 * (1 + Math.sqrt(2)));
-	    break;
-	case 10:
-	    h = l * Math.sqrt(5 + (2 * Math.sqrt(5)));
-	    break;
-	case 12:
-	    h = l * (2 + Math.sqrt(3));
-	    break;
-	default:
-	    h = 0;
-	}
-	return h;
+	this.a = a;
+	this.b = a;
     }
     @Override
     public double circumference() {
-	double value;
-	switch (n) {
-	case 3:
-	    value = l * 3;
-	    break;
-	case 4:
-	    value = l * 4;
-	    break;
-	case 5:
-	    value = l * 5;
-	    break;
-	case 6:
-	    value = l * 6;
-	    break;
-	case 8:
-	    value = l * 8;
-	    break;
-	case 10:
-	    value = l * 10;
-	    break;
-	case 12:
-	    value = l * 12;
-	    break;
-	default:
-	    value = l * 3;
-	}
-	return value;
+	return 2 * n * (a/2) * Math.sin(PI/n);
     }
     @Override
     public double area() {
-	double value;
-	switch (n) {
-	case 3:
-	    value = Math.pow(l, 2) * ((1/4) * Math.sqrt(3));
-	    break;
-	case 4:
-	    value = Math.pow(l, 2);
-	    break;
-	case 5:
-	    value = Math.pow(l, 2) * ((1/4) * Math.sqrt(5 * (5 + (2 * Math.sqrt(5)))));
-	    break;
-	case 6:
-	    value = Math.pow(l, 2) * ((3/2) * Math.sqrt(3));
-	    break;
-	case 8:
-	    value = Math.pow(l, 2) * 2 * (1 + Math.sqrt(2));
-	    break;
-	case 10:
-	    value = Math.pow(l, 2) * ((5/2) * Math.sqrt(5 + (2 * Math.sqrt(5))));
-	    break;
-	case 12:
-	    value = Math.pow(l, 2) * 3 * (2 + Math.sqrt(3));
-	    break;
-	default:
-	    value = Math.pow(l, 2) * ((1/4) * Math.sqrt(3));
-	}
-	return value;
+	return ((n*(a/2)*(a/2))/2) * Math.sin((2*PI)/n);
     }
     @Override
     public String getForm() {
-	return "Polygon: " + n + " corners, " + l + " length per side";
+	return "Polygon with " + n + " corners";
     }
 }
