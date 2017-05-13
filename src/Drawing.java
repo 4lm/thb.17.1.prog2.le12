@@ -13,11 +13,16 @@ public class Drawing {
 	shapes.remove(i);
 	indexCounter--;
     }
+    public Figure getShape(int i) {
+	return shapes.get(i);
+    }
     public int getIndexCounter() {
 	return indexCounter;
     }
     public void printShape(int i) {
 	System.out.println("Type         : " + shapes.get(i).toString());
+	System.out.println("PosX         : " + shapes.get(i).getX());
+	System.out.println("PosY         : " + shapes.get(i).getY());
 	System.out.println("Width        : " + shapes.get(i).getWidth());
 	System.out.println("Height       : " + shapes.get(i).getHeight());
 	System.out.println("Circumference: " + shapes.get(i).circumference());
