@@ -18,6 +18,10 @@ public class Ellipse extends Circle implements Dimension, Pi {
 	return 2 * PI * Math.sqrt((Math.pow((a/2),2) + Math.pow((b/2),2)) / 2);
     }
     @Override
+    public double area() {
+	return PI * (a/2) * (b/2); 
+    }
+    @Override
     public String getForm() {
 	return "Ellipse";
     }
