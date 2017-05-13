@@ -36,6 +36,11 @@ public class Polygon extends Figure {
 	}
 	this.l = l;
     }
+    Polygon(double x, double y, int n, double l, Color fC, Color lC) {
+	this(x, y, n, l);
+	fillColor = fC;
+	lineColor = lC;
+    }
     @Override
     public double getWidth() {
 	double w;

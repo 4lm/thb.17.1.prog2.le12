@@ -16,10 +16,7 @@ abstract class Figure {
 	this.b = b;
     }
     Figure(double x, double y, double a, double b, Color fC, Color lC) {
-	this.x = x;
-	this.y = y;
-        this.a = a;
-	this.b = b;
+	this(x, y, a, b);
 	fillColor = fC;
 	lineColor = lC;
     }
