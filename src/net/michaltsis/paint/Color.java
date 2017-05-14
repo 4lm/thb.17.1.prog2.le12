@@ -4,7 +4,7 @@ package net.michaltsis.paint;
  * Color class
  */
 class Color {
-    // Attribute
+    // Field
     private int rgb;
 
     // Constructor

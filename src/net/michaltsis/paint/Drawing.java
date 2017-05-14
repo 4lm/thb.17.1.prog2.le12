@@ -7,7 +7,7 @@ import java.util.List;
  * Drawing class, which operates on an ArrayList
  */
 public class Drawing {
-    // Attributes
+    // Fields
     private List<Figure> shapes = new ArrayList<>();
     private int indexCounter = -1;
 
