@@ -4,10 +4,11 @@ package net.michaltsis.paint;
  * Figure class. Abstract super class
  */
 abstract class Figure {
-    // Attributes
+    // Fields
     protected double x, y, a, b;
     protected Color fillColor;
     protected Color lineColor;
+    protected int n;
 
     // Constructors
     Figure() {

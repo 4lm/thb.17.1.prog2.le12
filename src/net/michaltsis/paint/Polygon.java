@@ -4,9 +4,6 @@ package net.michaltsis.paint;
  * Polygon class. Regular polygons with 3 to n corners
  */
 public class Polygon extends Figure implements Pi {
-    // Attribute
-    private int n;
-
     // Constructors
     Polygon() {
         super();
