@@ -44,9 +44,34 @@ public class Test {
         draw.addShape(new Polygon(10, 10, 2, 2, 1000));
         draw.addShape(new Polygon(10, 10, 2, 2, 10000));
         draw.addShape(new Polygon(10, 10, 2, 2, 100000));
+        draw.addShape(new Polygon(10, 10, 2, 2, 1000000000));
+        draw.addShape(new Circle(10, 10, 2, 2));
         for (int i = 0; i <= draw.getIndexCounter(); i++) {
             draw.printShape(i);
             System.out.println();
         }
+        Figure polygon = new Polygon(10,10,2,2,64);
+        System.out.println(polygon.x);
+        System.out.println(polygon.y);
+        System.out.println(polygon.a);
+        System.out.println(polygon.b);
+        System.out.println(polygon.n);
+
+        System.out.println();
+
+        Polygon polygon2 = new Polygon(10,10,2,2,64);
+        System.out.println(polygon2.x);
+        System.out.println(polygon2.y);
+        System.out.println(polygon2.a);
+        System.out.println(polygon2.b);
+        System.out.println(polygon2.n);
+
+        System.out.println();
+
+        Figure circle = new Circle(10,10,2,2);
+        System.out.println(circle.x);
+        System.out.println(circle.y);
+        System.out.println(circle.a);
+        System.out.println(circle.b);
     }
 }
