@@ -1,23 +1,31 @@
+package net.michaltsis.paint;
+
+/**
+ * Triangle class
+ */
 public class Triangle extends Figure {
+    // Constructors
     Triangle() {
-	super();
+        super();
     }
     Triangle(double x, double y, double a, double b) {
-	super(x, y, a, b);
+        super(x, y, a, b);
     }
     Triangle(double x, double y, double a, double b, Color fC, Color lC) {
-	super(x, y, a, b, fC, lC);
+        super(x, y, a, b, fC, lC);
     }
+
+    // Methods
     @Override
     public double circumference() {
-	return 2 * Math.sqrt((a/2)*(a/2) + b*b) + a;
+        return 2 * Math.sqrt((a / 2) * (a / 2) + b * b) + a;
     }
     @Override
     public double area() {
-	return (a * b) / 2;
+        return (a * b) / 2;
     }
     @Override
     public String getForm() {
-	return "Triangle";
+        return "Triangle";
     }
 }

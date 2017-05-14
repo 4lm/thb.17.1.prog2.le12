@@ -1,58 +1,69 @@
+package net.michaltsis.paint;
+
+/**
+ * Figure class. Abstract super class
+ */
 abstract class Figure {
+    // Attributes
     protected double x, y, a, b;
     protected Color fillColor;
     protected Color lineColor;
+
+    // Constructors
     Figure() {
-	x = 0;
-	y = 0;
+        x = 0;
+        y = 0;
         a = 0;
         b = 0;
     }
     Figure(double x, double y, double a, double b) {
-	this.x = x;
-	this.y = y;
+        this.x = x;
+        this.y = y;
         this.a = a;
-	this.b = b;
+        this.b = b;
     }
     Figure(double x, double y, double a, double b, Color fC, Color lC) {
-	this(x, y, a, b);
-	fillColor = fC;
-	lineColor = lC;
+        this(x, y, a, b);
+        fillColor = fC;
+        lineColor = lC;
     }
+
+    // Methods
     public void setPos(double x, double y) {
-	this.x = x;
-	this.y = y;
+        this.x = x;
+        this.y = y;
     }
     public void setDim(double a, double b) {
-	this.a = a;
-	this.b = b;
+        this.a = a;
+        this.b = b;
     }
     public void setColors(Color fC, Color lC) {
-	fillColor = fC;
-	lineColor = lC;
+        fillColor = fC;
+        lineColor = lC;
     }
     public String getForm() {
-	return "Figure";
+        return "Figure";
     }
     public double getX() {
-	return x;
+        return x;
     }
     public double getY() {
-	return y;
+        return y;
     }
     public double getWidth() {
-	return a;
+        return a;
     }
     public double getHeight() {
-	return b;
+        return b;
     }
     public String getColors() {
-	return "Fill: " + fillColor.getRGB() + " Line: " + lineColor.getRGB();
+        return "Fill: " + fillColor.getRGB() + " Line: " + lineColor.getRGB();
     }
     @Override
     public String toString() {
-	return getForm();
+        return getForm();
     }
+    // Abstract methods
     public abstract double circumference();
     public abstract double area();
 }
