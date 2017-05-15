@@ -13,7 +13,9 @@ public class Polygon extends Figure implements Pi {
         super(x, y, a, b);
         this.n = n;
         if (n < 3)
-            n = 3;
+            this.n = 3;
+        if (n == 3)
+            this.b = Math.sqrt(a*a - (a/2)*(a/2));
     }
     Polygon(double x, double y, double a, double b, int n, Color fC, Color lC) {
         this(x, y, a, b, n);
