@@ -56,18 +56,14 @@ public class Test {
         System.out.println(polygon.a);
         System.out.println(polygon.b);
         System.out.println(polygon.n);
-
         System.out.println();
-
         Polygon polygon2 = new Polygon(10,10,2,2,64);
         System.out.println(polygon2.x);
         System.out.println(polygon2.y);
         System.out.println(polygon2.a);
         System.out.println(polygon2.b);
         System.out.println(polygon2.n);
-
         System.out.println();
-
         Figure circle = new Circle(10,10,2,2);
         System.out.println(circle.x);
         System.out.println(circle.y);
